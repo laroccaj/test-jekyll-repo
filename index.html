@@ -1,0 +1,68 @@
+---
+layout: default
+title: John Doe | Window Washing Services | Owner, ClearView Windows
+description: Professional window washer with over 15 years of experience serving residential and commercial clients. Reliable scheduling, safety-first operations, and spotless results.
+canonical: https://example.com/
+schema_json: |
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://example.com/#person",
+    "name": "John Doe",
+    "url": "https://example.com/",
+    "mainEntityOfPage": "https://example.com/",
+    "image": {
+      "@type": "ImageObject",
+      "@id": "https://example.com/#headshot",
+      "url": "https://example.com/assets/img/abc7-newsroom-interview-june-2016.jpg",
+      "caption": "John Doe professional headshot"
+    },
+    "jobTitle": "Owner / Window Washer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "ClearView Windows",
+      "url": "https://example.com/"
+    },
+    "alumniOf": [
+      { "@type": "Organization", "name": "Company A", "url": "https://example.com/#company-a" },
+      { "@type": "Organization", "name": "Company B", "url": "https://example.com/#company-b" },
+      { "@type": "Organization", "name": "Company C", "url": "https://example.com/#company-c" }
+    ],
+    "knowsAbout": [
+      "Residential window cleaning",
+      "Commercial window washing",
+      "High-rise safety practices",
+      "Water-fed pole systems",
+      "Stain and hard-water removal",
+      "Scheduling and customer service"
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/johndoe",
+      "https://x.com/johndoe"
+    ]
+  }
+---
+
+<div class="card hero">
+  <img class="headshot" src="{{ '/assets/img/headshot-john-doe.jpg' | relative_url }}" alt="John Doe headshot" />
+
+  <div>
+    <h1>John Doe</h1>
+
+    <p class="lead">
+      With more than 15 years of experience in residential and commercial window washing, John Doe is known for dependable service, safety-first practices, and consistently spotless results.
+    </p>
+
+    <p>
+      John has worked with a range of clients—from single-family homes to multi-site commercial properties—and previously held roles at Company A, Company B, and Company C. Today, as the owner of ClearView Windows, he provides scheduled maintenance and one-time cleanings, with a focus on quality, care for property, and clear communication.
+    </p>
+
+    <hr class="sep" />
+
+    <div class="btnrow">
+      <a class="btn" href="/bio/">Read full bio</a>
+      <a class="btn" href="/gallery/">Photo Gallery</a>
+      <a class="btn" href="/media/">Media coverage</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>{{ page.title }}</title>
+
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
+  <link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}">
+  {% if page.canonical %}
+  <link rel="canonical" href="{{ page.canonical }}" />
+  {% else %}
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+  {% endif %}
+
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}" />
+  {% endif %}
+
+  {% if page.og_title %}
+  <meta property="og:title" content="{{ page.og_title }}" />
+  {% else %}
+  <meta property="og:title" content="{{ page.title }}" />
+  {% endif %}
+  {% if page.og_description %}
+  <meta property="og:description" content="{{ page.og_description }}" />
+  {% elsif page.description %}
+  <meta property="og:description" content="{{ page.description }}" />
+  {% endif %}
+  <meta property="og:type" content="website" />
+  {% if page.canonical %}
+  <meta property="og:url" content="{{ page.canonical }}" />
+  {% else %}
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  {% endif %}
+
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
+
+  {% if page.schema_json %}
+  <script type="application/ld+json">
+  {{ page.schema_json }}
+  </script>
+  {% endif %}
+</head>
+
+<body>
+  {% include header.html %}
+
+  <main>
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+
+  {% include footer.html %}
+</body>
+</html>
